@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>My Fav Heroes</h3>
+  <ion-list>
+    <button ion-item *ngFor="let hero of heroes" (click)="itemSelected(hero)">
+      {{ hero.id }} - {{ hero.name }}
+    </button> 
+  </ion-list>
+</ion-content>
